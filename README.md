@@ -20,7 +20,7 @@ To install the FIFTagHandler plugin in your app, use the following command-line
 
 ```shell
 
-	cordova plugin add https://github.com/fiftyfivemobile/fiftaghandler-cordova-plugin
+	cordova plugin add https://github.com/fifty-five/fiftaghandler-myrenault
 
 ```
 
