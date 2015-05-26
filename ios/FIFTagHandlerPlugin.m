@@ -73,8 +73,7 @@
 - (void) setVerboseLoggingEnabled: (CDVInvokedUrlCommand*)command
 {
     CDVPluginResult* result = nil;
-    int logLevel = [command.arguments objectAtIndex:0];
-    
+   
     TAGManager *tagManager = [TAGManager instance];
     [tagManager.logger setLogLevel:kTAGLoggerLogLevelVerbose];
 
