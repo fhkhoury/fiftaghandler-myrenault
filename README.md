@@ -40,7 +40,7 @@ To initialize the FIFTagHandler SDK, use the `initWithContainerId` function. Mak
 	fiftaghandler.initWithContainerId('GTM-XXXX');
 
 	//activate verbose mode 
-	fiftaghandler.setVerboseLoggingEnabled()
+	fiftaghandler.setVerboseLoggingEnabled();
 	
 
 ```
