@@ -36,11 +36,12 @@ To initialize the FIFTagHandler SDK, use the `initWithContainerId` function. Mak
 
 	var fiftaghandler = navigator.fiftaghandler;
 
+	// Init using the GTM container id
+	fiftaghandler.initWithContainerId('GTM-XXXX');
+
 	//activate verbose mode 
 	fiftaghandler.setVerboseLoggingEnabled()
 	
-	// Init using the GTM container id
-	fiftaghandler.initWithContainerId('GTM-XXXX');
 
 ```
 

@@ -31,6 +31,13 @@
 /** GTM container */
 @property (nonatomic, strong) TAGContainer *container;
 
+/** App launchOptions */
+@property (nonatomic, strong) NSDictionary *launchOptions;
+
+/** Flag to know is launchOptions has been set */
+@property (nonatomic, assign) BOOL launchOptionsFlag;
+
+
 
 /**
  *  Use sharedHandler to get a shared instance of FIFTagHandler.

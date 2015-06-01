@@ -55,6 +55,12 @@
 #define GTM_TAG_TRANSACTION                         @"tagTransaction"
 
 
+/**
+ *  GTM funtion registerPush.
+ */
+#define GTM_TAG_REGISTER_PUSH                         @"registerPush"
+
+
 
 
 typedef NS_ENUM(NSInteger, FIFReturnCode) {

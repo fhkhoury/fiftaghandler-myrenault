@@ -63,8 +63,8 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callback) throws JSONException {
         try {
-            if ("setContainerId".equals(action)) {
-                setContainerId(args.getString(0));
+            if ("initWithContainerId".equals(action)) {
+                initWithContainerId(args.getString(0));
                 callback.success();
                 return true;
             } else if ("push".equals(action)) {
@@ -82,7 +82,7 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
         return false;
     }
     
-    private void setContainerId(String containerId) {
+    private void initWithContainerId(String containerId) {
         //Launch Tag Manager
         Context context = this.cordova.getActivity().getApplicationContext();
         tagManager = TagManager.getInstance(context);
@@ -120,13 +120,19 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
     }
 
     private void setVerboseLoggingEnabled(){
-        tagManager.setVerboseLoggingEnabled(true);
+         if (tagManager == null) {
+            throw new IllegalStateException("FIFTagHandler not initialized. Call initWithContainerId first.");
+        }
+        else{
+             tagManager.setVerboseLoggingEnabled(true);
+        }
+       
     }
 
     private void push(Map<String, Object> map) {
         // Fetch the datalayer
         if (tagManager == null) {
-            throw new IllegalStateException("FIFTagHelper not initialized. Call setContainerId.");
+            throw new IllegalStateException("FIFTagHandler not initialized. Call initWithContainerId first.");
         }
         else {
             DataLayer dataLayer = tagManager.getDataLayer();

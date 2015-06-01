@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="com.fiftyfive.FIFTagHandler"
-  version="0.0.3">
+  version="0.0.4">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
   </engines>
@@ -60,9 +60,6 @@
       </feature>
     </config-file>
 
-    <config-file target="AndroidManifest.xml" parent="/manifest/application">
-      <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-    </config-file>
 
     <config-file target="AndroidManifest.xml" parent="/*">
       <uses-permission android:name="android.permission.INTERNET" />
@@ -77,6 +74,7 @@
     <source-file src="android/libs/FIFTagHandler.jar" target-dir="libs" />
     <source-file src="android/libs/MobileAppTracker-3.4.2.jar" target-dir="libs" />
 
+  
 
     <proguard-config>
 -keep class * extends java.util.ListResourceBundle {
