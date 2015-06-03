@@ -33,6 +33,10 @@ import org.json.JSONObject;
 import java.util.Collections;
 import java.util.Iterator;
 
+import com.fiftyfive.tagHandler.MAT.v3_4_2.MATFunctionCallTagHandler;
+import com.fiftyfive.tagHandler.GA.v3_0_0.GAFunctionCallMacroHandler;
+
+
 public class FIFTagHandlerPlugin extends CordovaPlugin {
     
 
@@ -113,7 +117,12 @@ public class FIFTagHandlerPlugin extends CordovaPlugin {
                     return;
                 }
 
-                FIFTagHandler.getInstance().register();
+                //manuel registering
+                MATFunctionCallTagHandler mat = new MATFunctionCallTagHandler();
+                mat.register(containerHolder.getContainer());
+                GAFunctionCallMacroHandler ga = new GAFunctionCallMacroHandler();
+                ga.register(containerHolder.getContainer());
+
 
             }
         }, 2, TimeUnit.SECONDS);
