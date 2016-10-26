@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="com.fiftyfive.FIFTagHandler"
-  version="0.0.6">
+  version="0.0.7">
   <engines>
     <engine name="cordova" version=">=3.0.0" />
   </engines>
@@ -31,16 +31,16 @@
     <header-file src="ios/TAGLogger.h" />
     <header-file src="ios/TAGManager.h" />
 
-
     <header-file src="ios/FIFTagHandlerPlugin.h" />
     <source-file src="ios/FIFTagHandlerPlugin.m" />
+    <framework src="ios/libs/FIFTagHandler.framework" custom="true" />
 
     <source-file src="ios/libs/libGoogleAnalyticsServices.a" framework="true" />
     <source-file src="ios/libs/libAdIdAccess.a" framework="true" />
-    <framework src="ios/libs/MobileAppTracker.framework" custom="true" />
-    <framework src="ios/libs/FIFTagHandler.framework" custom="true" />
 
-    <resource-file src="container/GTM-PWLMR7"/>
+    <framework src="ios/libs/MobileAppTracker.framework" custom="true" />
+
+    <resource-file src="container/GTM-5SFBXR"/>
 
 
     <framework src="MobileCoreServices.framework" />
@@ -49,8 +49,8 @@
     <framework src="SystemConfiguration.framework" />
     <framework src="CoreData.framework" />
     <framework src="AdSupport.framework" />
-    <framework src="libsqlite3.dylib" />
-    <framework src="libz.dylib" />
+    <framework src="libsqlite3.tbd" />
+    <framework src="libz.tbd" />
   </platform>
 
   <platform name="android">
