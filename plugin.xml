@@ -40,7 +40,7 @@
 
     <framework src="ios/libs/MobileAppTracker.framework" custom="true" />
 
-    <resource-file src="container/GTM-5SFBXR"/>
+    <resource-file src="container/GTM-PWLMR7"/>
 
 
     <framework src="MobileCoreServices.framework" />
